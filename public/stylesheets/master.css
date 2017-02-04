@@ -69,3 +69,17 @@ hr.small {
 .highlighted-text {
     color : #fb6c2c;
 } 
+
+/* ANCHOR LIKE BUTTON  */
+
+.a-btn {
+    color : #fff;    
+}
+
+.a-btn:hover {
+    color : #fff;    
+}
+
+.a-btn:visited {
+    color : #fff;    
+}

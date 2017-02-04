@@ -37,6 +37,18 @@
     border-top-right-radius : 0;
 }
 
+#inputPwValid1
+{
+    border-radius : 0;
+}
+
+#inputPwValid2
+{
+    border-top-left-radius : 0;
+    border-top-right-radius : 0;
+}
+
+
 .social-items {
     font-size : 25px;
     background-color : #fb6c2c;
@@ -49,6 +61,7 @@
 .social-items:visited{
     color : #fff;
 }
+
 .i-fb {
     background-color : #3b5998;
     margin-right:10px;

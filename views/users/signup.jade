@@ -12,14 +12,15 @@ block body
                     span.highlighted-text F
                     |OCUSED
                 label(for="inputEmail").sr-only
-                input(type='email' , placeholder='Enter Your Email')#inputEmail.form-control.input-lg                 
-                label(for="inputPw").sr-only
-                input(type='password' , placeholder='Enter Your Password')#inputPw.form-control.input-lg
-                div.chkbox
-                    label.pull-left
-                        input(type='checkbox' value='remember-me')
-                        | Remember me
-                button(type='submit').btn.btn-lg.btn-warning.btn-block SIGN IN 
+                input(type='email' , placeholder='Enter Email')#inputEmail.form-control.input-lg                 
+                label(for="inputPwValid1").sr-only
+                input(type='password' , placeholder='Enter Password')#inputPwValid1.form-control.input-lg
+                label(for="inputPwValid2").sr-only
+                input(type='password' , placeholder='Enter Password for valid')#inputPwValid2.form-control.input-lg
+
+                br
+                
+                button(type='submit').btn.btn-lg.btn-warning.btn-block SIGN UP 
                 
                 br
 
@@ -31,7 +32,7 @@ block body
                         i.fa.fa-twitter
                     a(href='#google').col-md-3.col-sm-3.col-xs-3.social-items
                         i.fa.fa-google
-                
+
                 br
-                a(href='/users/signup').a-btn
-                    | 아직 계정이 없으신가요?
+                a(href='/users/signin').a-btn
+                    | 이미 계정을 갖고 계신가요?
