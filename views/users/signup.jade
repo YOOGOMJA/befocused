@@ -4,7 +4,7 @@ block head
 block body
     section.sign
         div.container.text-vertical-center
-            form.form-signin
+            form(action='/users/signup' , method='post').form-signin
                 span.pull-right(style='font-size : 20px;')
                     a(href='/').a-btn
                         i.fa.fa-times
@@ -12,11 +12,11 @@ block body
                     span.highlighted-text F
                     |OCUSED
                 label(for="inputEmail").sr-only
-                input(type='email' , placeholder='Enter Email')#inputEmail.form-control.input-lg                 
+                input(type='email' , placeholder='Enter Email' , name='inputEmail')#inputEmail.form-control.input-lg                 
                 label(for="inputPwValid1").sr-only
-                input(type='password' , placeholder='Enter Password')#inputPwValid1.form-control.input-lg
+                input(type='password' , placeholder='Enter Password' , name='inputPwValid1')#inputPwValid1.form-control.input-lg
                 label(for="inputPwValid2").sr-only
-                input(type='password' , placeholder='Enter Password for valid')#inputPwValid2.form-control.input-lg
+                input(type='password' , placeholder='Enter Password for valid' , name='inputPwValid2')#inputPwValid2.form-control.input-lg
 
                 br
                 
