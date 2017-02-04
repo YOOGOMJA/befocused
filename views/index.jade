@@ -7,16 +7,16 @@ block content
   header.header
     div.text-vertical-center
       h1 BE 
-        span.highlighted F
+        span.highlighted-text F
         |OCUSED  
       h3 공부와 업무에 집중하는 시간을 확인하고 효율을 높여보세요
       br
       a(href='#about').btn.btn-orange.btn-lg GET MORE INFO
       br
       br
-      a(href='#signup').sign 아직 계정이 없으신가요?
+      a(href='/users/signup').sign 아직 계정이 없으신가요?
       br
-      a(href='#signin').sign 이미 계정을 갖고 계신가요?
+      a(href='/users/signin').sign 이미 계정을 갖고 계신가요?
 
 
   section#about.about
@@ -67,3 +67,61 @@ block content
   aside.callout
     div.text-vertical-center
       h1 RAISE UP YOUR CONCENTRATION
+
+  section#portpolio.portpolio
+    div.container
+      div.row
+        div.col-lg-10.col-lg-offset-1.text-center
+          h2 Our Pages 
+            hr.small
+          div.row
+            div.col-md-6
+              div.portpolio-item
+                a(href='#')
+                  img(src='/images/compressed/img_index3.jpg').img-portpolio.img-responsive
+            div.col-md-6
+              div.portpolio-item
+                a(href='#')
+                  img(src='/images/compressed/img_index3.jpg').img-portpolio.img-responsive
+
+            div.col-md-6
+              div.portpolio-item
+                a(href='#')
+                  img(src='/images/compressed/img_index3.jpg').img-portpolio.img-responsive
+
+            div.col-md-6
+              div.portpolio-item
+                a(href='#')
+                  img(src='/images/compressed/img_index3.jpg').img-portpolio.img-responsive
+  footer
+    .container
+      .row
+        .col-lg-10.col-lg-offset-1.text-center
+          h4
+            strong Start Bootstrap
+          p
+            | 3481 Melrose Place
+            br
+            | Beverly Hills, CA 90210
+          ul.list-unstyled
+            li
+              i.fa.fa-phone.fa-fw
+              |  (123) 456-7890
+            li
+              i.fa.fa-envelope-o.fa-fw
+              a(href='mailto:name@example.com') name@example.com
+          br
+          ul.list-inline
+            li
+              a(href='#')
+                i.fa.fa-facebook.fa-fw.fa-3x.text-primary
+            li
+              a(href='#')
+                i.fa.fa-twitter.fa-fw.fa-3x.text-primary
+            li
+              a(href='#')
+                i.fa.fa-dribbble.fa-fw.fa-3x.text-primary
+          hr.small
+          p.text-muted Copyright © Your Website 2014
+    a#to-top.btn.btn-dark.btn-lg(href='#top', style='display: block; position: fixed;')
+      i.fa.fa-chevron-up.fa-fw.fa-1x

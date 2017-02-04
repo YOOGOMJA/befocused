@@ -1,0 +1,54 @@
+.sign{
+    display : table;
+    position : relative;
+    width : 100%;
+    height : 100%;
+    background : url('/images/compressed/img_index3.jpg') no-repeat center center scroll;
+    background-size : cover;
+}
+
+.sign h2{
+    font-weight:800;
+
+} 
+
+.sign-items{
+    margin-top : 20px;
+    font-weight : 800;
+}
+
+.highlighted-bar{
+    background-color : #fb6c2c;
+    height:3px;
+}
+
+.normal-bar{
+    background-color : #fff;
+    height:3px;
+}
+
+/* SOCIAL */
+
+.social-items{
+    margin-bottom:10px;
+    width: 100%;
+    height : 43px;
+    background-color : #fb6c2c;
+    border-radius : 10px;
+    padding-top : 7px;
+    padding-left : 20px;
+    font-size : 20px;
+    color : #fff;
+}
+
+.fb{
+    background-color : #3b5998;
+}
+
+.tw{
+    background-color : #00aced;
+}
+
+.social-item-name {
+    margin-left : 25px;
+}
