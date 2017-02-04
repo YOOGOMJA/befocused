@@ -36,3 +36,25 @@
     border-top-left-radius : 0;
     border-top-right-radius : 0;
 }
+
+.social-items {
+    font-size : 25px;
+    background-color : #fb6c2c;
+    color : #fff;
+    border-radius : 3px;
+}
+.social-items:hover{
+    color :#fff;
+}
+.social-items:visited{
+    color : #fff;
+}
+.i-fb {
+    background-color : #3b5998;
+    margin-right:10px;
+}
+.i-tw{
+    background-color : #4099ff;
+    margin-right : 10px;
+}
+
