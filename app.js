@@ -29,6 +29,23 @@ mongoose.connect(mongo_uri.formatMongoose("mongodb://master:rhawk1202@ds139899.m
   }
 });
 
+// ## session
+var session = require('express-session');
+// ================
+// PASSPORT 
+// ================
+var passport = require('passport');
+var flash = require('connect-flash');
+var passport_config = require('./config/passport');
+app.use(session({
+  secret : "GOMJA-FOCUSED-SECRET",
+  saveUninitialized : true
+}));
+passport_config();
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

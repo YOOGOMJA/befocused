@@ -9,10 +9,12 @@ router.get('/', function(req, res, next) {
 
 router.get('/signup' , function(req,res,next){
   res.render('./users/signup' , { title : "SIGN UP" });
-})
+});
+
 
 router.get('/signin' , function(req,res,next){
   res.render('./users/signin' , { title : "SIGN IN" });
-})
+});
+
 
 module.exports = router;
