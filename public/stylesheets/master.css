@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html,
+body {
+    width: 100%;
+    height : 100%;
+    font-family : "Nanum Gothic";
+}
+
+body {
+    margin : 0px;
+}
+
+
+

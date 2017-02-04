@@ -1,5 +1,20 @@
 extends layout
 
+block head
+
+  link(rel='stylesheet', href='/stylesheets/index.css')
 block content
-  h1= title
-  p Welcome to #{title}
+  header.header
+    div.text-vertical-center
+      h1 BE 
+        span.highlighted F
+        |OCUSED  
+      h3 공부와 업무에 집중하는 시간을 확인하고 효율을 높여보세요
+      br
+      a(href='#about').btn.btn-orange.btn-lg GET MORE INFO
+  section#about.about
+    div.container
+      div.row
+        div.col-lg-12.text-center
+          h2 Help you getting focus on studying!!!
+          p.lead This theme features some wonderful photography courtesy of Death to the Stock Photo.
