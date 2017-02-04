@@ -1,7 +1,41 @@
 doctype html
-html
+html(lang='ko' ng-app='spoc-app')
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    <!-- META TAG-->
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name='description' , content='')
+    meta(name='author' , content='GOMJA')
+    meta(name="robots" content="noindex,nofollow")
+
+    meta(property='og:title' content='BEFOCUSED')
+    meta(property='og:description' content='BEFOCUSED')
+    <!-- meta(property='og:image' , content='') -->
+    <!-- META END-->
+
+    title={ title} 
+    <!-- SCRIPT -->
+    script(type='text/javascript' , src='/bower/jquery/dist/jquery.js')
+    script(type='text/javascript' , src='/bower/bootstrap/dist/js/bootstrap.js')
+    script(type='text/javascript' , src='/bower/angular/angular.js')
+    script(type="text/javascript" , src="/javascripts/master.js")
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+    script(src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js")
+    script(src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js")
+    <![endif]-->
+    
+    <!-- STYLE -->
+    link(href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet")
+    link(rel="stylesheet", href='/bower/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/master.css')
+
+    block head
+  body 
+    block body
     block content
+  footer 
+    block foot

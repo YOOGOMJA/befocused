@@ -10,6 +10,26 @@ var users = require('./routes/users');
 
 var app = express();
 
+
+// ===============
+// MONGOOSE SET UP
+// ===============
+var mongoose = require("mongoose");
+var mongo_uri = require("mongodb-uri");
+
+mongoose.connect(mongo_uri.formatMongoose("mongodb://master:rhawk1202@ds139899.mlab.com:39899/heroku_38ctzwl1") , function(err){
+  if(err)
+  { 
+    console.log('DB CONNECT PROCESS GOT PROBLEM !! '); 
+    console.log("message : [" + err + "]");
+  }
+  else 
+  {
+    console.log("DB CONNECTED!!");
+  }
+});
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -22,6 +42,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// ================
+// bower path setup
+// ================
+app.use('/bower' , express.static(path.join(__dirname , "/bower_components")));
+
+// router setup !! 
 app.use('/', index);
 app.use('/users', users);
 
