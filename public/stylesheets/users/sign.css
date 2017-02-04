@@ -10,7 +10,8 @@
 
 .sign h2{
     font-weight:800;
-    font-size : 40px;
+    font-size : 35px;
+    margin-bottom : 25px;
 } 
 
 .sign .form-signin {
@@ -21,4 +22,17 @@
 
 .sign .form-signin button{
     font-weight : 800;
+}
+
+/* input */
+
+#inputEmail
+{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius : 0;
+}
+#inputPw
+{
+    border-top-left-radius : 0;
+    border-top-right-radius : 0;
 }
