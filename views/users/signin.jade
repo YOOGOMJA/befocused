@@ -3,19 +3,17 @@ block head
     link(rel='stylesheet' , href='/stylesheets/users/sign.css')
 block body
     section.sign
-        div.row.text-vertical-center
-            div.col-lg-10.col-lg-offset-1.text-left
-                span.col-md-3.col-xs-3.col-sm-3
-                span.col-md-6.col-xs-6.col-sm-6
-                    h2 BE 
-                        span.highlighted-text F
-                        |OCUSED  
-                        
-                span.col-md-3.col.xs-3.col-sm-3
-                
-            div.col-lg-10.col-lg-offset-1.col-xs-10.col-xs-offset-1.text-center
-                span.col-md-3.col-xs-3.col-sm-3
-                span.col-md-2.col-xs-2.col-sm-2.highlighted-bar
-                span.col-md-4.col-xs-4.col-sm-4.normal-bar
-                span.col-md-3.col.xs-3.col-sm-3
-            
+        div.container.text-vertical-center
+            form.form-signin
+                h2.text-center BE 
+                    span.highlighted-text F
+                    |OCUSED
+                label(for="inputEmail").sr-only
+                input(type='email' , placeholder='Enter Your email')#inputEmail.form-control                  
+                label(for="inputPw").sr-only
+                input(type='password' , placeholder='Enter Your email')#inputPw.form-control        
+                div.chkbox
+                    label.pull-left
+                        input(type='checkbox' value='remember-me')
+                        | Remember me
+                button(type='submit').btn.btn-lg.btn-warning.btn-block SIGN IN 
