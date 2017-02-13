@@ -26,31 +26,58 @@ module.exports = function(){
 
 			// 패스워드 Valid체크 
 			var body = req.body;
+			
+			// 1. EMAIL // PASSWORD // PASSWORD2 존재 유무
+			if(!body.inputEmail || body.inputEmail.trim() == ""){
+				console.log("VALID!!")
+				return done(null, false , req.flash('signupMessage' , "이메일을 입력해주세요"));
+			}
+			else if(!body.inputPwValid1 || body.inputPwValid1.trim() =="" || !body.inputPwValid2 || body.inputPwValid2.trim() == "")
+			{
+				console.log("VALID!!")
+				return done(null, false , req.flash('signupMessage' , "패스워드를 입력해주세요"));
+			}
+			else{ console.log("PASSED"); }
 
+			// 2. 패스워드 일치 여부
 			if(body.inputPwValid1.trim() != body.inputPwValid2){
 				return done(null , false, req.flash('signupMessage' , '패스워드가 일치하지 않습니다'));
 			}
-			/*
-            if(!User.secureCheck(body.inputPassword)){
-				return done(null , false, req.flash('signupMessage' , '유효한 패스워드가 아닙니다 규칙을 확인해주세요'));
-			}
-            */
-			
+
 			User.findOne({ "LOCAL.EMAIL" : email } , function(err , user){
-				if(err){ done(err); }
+				if(err){
+					console.log("DB CRASHED !!!" , err); 
+					return done(err); 
+				}
+
 				if(user){ return done(null , false , req.flash("signupMessage" , "이 이메일은 이미 사용중입니다")); }
 				else{
 					var newbie = new User();
+
+					if(!newbie.validEmail(email))
+					{
+						return done(null , false, req.flash('signupMessage' , '이메일 형식이 올바르지 않습니다'));
+					}
+					else if(!newbie.secureCheck(password))
+					{
+						return done(null , false , req.flash('signupMessage' , "패스워드 형식이 올바르지 않습니다"));
+					}
+
 					newbie.LOCAL.EMAIL = email;
 					newbie.LOCAL.PASSWORD = newbie.generateHash(password);
 					newbie.INFO.EMAIL = email;
-						
+
+
 					newbie.save(function(err){
 						if(err){ throw err; }
+
+						console.log("ACCOUNT CREATED!!");
 						return done(null , newbie);
 					});
 				}
 			});
+
+			
 		});
 	}));
 	

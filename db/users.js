@@ -38,6 +38,15 @@ userSchema.methods.validPassword = function(password){
 	return bcrypt.compareSync(password , this.LOCAL.PASSWORD);
 }
 
+userSchema.methods.validEmail = function(email){
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if(!email) return false;
+	else
+	{
+		return re.test(email);
+	}
+}
+
 // 패스워드 조약
 // 숫자 특수문자 영문자 포함
 // 길이가 10자 이상 20자 이하

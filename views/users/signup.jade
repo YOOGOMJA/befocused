@@ -11,6 +11,13 @@ block body
                 h2.text-center BE 
                     span.highlighted-text F
                     |OCUSED
+
+                                    
+                if(message != undefined && message.length > 0)
+                    div.alert.alert-danger
+                        =message
+
+
                 label(for="inputEmail").sr-only
                 input(type='email' , placeholder='Enter Email' , name='inputEmail')#inputEmail.form-control.input-lg                 
                 label(for="inputPwValid1").sr-only
